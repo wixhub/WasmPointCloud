@@ -1,0 +1,28 @@
+/* ==========================================================================
+   APPLICATION SHELL STYLES
+   ========================================================================== */
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px;
+  background-color: #0f172a;
+  color: #f8fafc;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden; /* Remove or change to auto if you want scrolling */
+}
+
+/* Make router-outlet take up the flexible middle space */
+router-outlet + * {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+app-footer {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  flex-shrink: 0; /* Prevents the footer from getting squished */
+}
